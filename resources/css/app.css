@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}

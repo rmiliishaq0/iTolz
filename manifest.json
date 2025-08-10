@@ -1,0 +1,38 @@
+{
+  "name": "iTolz",
+  "description": "The iTolz Extension lets you unlock and use premium tools instantly! With just one click, you can access top services effortlessly.",
+  "version": "1.0.1",
+  "manifest_version": 3,
+  "action": {},
+  "icons": {
+    "16": "assets/ltolz.png",
+    "32": "assets/ltolz.png",
+    "48": "assets/ltolz.png",
+    "128": "assets/ltolz.png"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "activeTab",
+    "nativeMessaging",
+    "scripting",
+    "debugger",
+    "management",
+    "activeTab",
+    "notifications",
+    "browsingData"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
